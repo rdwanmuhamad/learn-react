@@ -5,22 +5,21 @@ import img01 from './assets/img/img-01.jpg'
 function App() {
   return (
     <div className="App">
-      
+      <ProductGalleries/>
+      <ProductDetails/>
     </div>
   );
 }
 
-function productGalleries(){
+function ProductGalleries(){
   return (
-    <div className="productGalleries">
-      <div className="App-Photo">
-        <img src={img01} />
-      </div>
+    <div className="App-Photo">
+      <img src={img01} />
     </div>
   );
 }
 
-function productDetails(){
+function ProductDetails(){
   const category = "Gundam Series";
   const title = "Gundam Barbatos";
   const price = 300000;
