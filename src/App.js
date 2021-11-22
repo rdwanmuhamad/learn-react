@@ -31,12 +31,12 @@ function ProductDetails(props){
           Magnam quam est fugiat aliquid sit doloremque voluptates commodi, soluta pariatur qui quae. 
           Omnis, quasi!
       </p>
-      <a href="#" onClick={AddCart}>Add Cart</a>
+      <a href="#" onClick={(e) => AddCart(title, e)}>Add Cart</a>
   </div>
   );
 }
 
-function AddCart(){
-  return console.log("Membeli Produk....");
+function AddCart(e){
+  return console.log("Membeli Produk " + e);
 }
 export default App;
