@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <ProductGalleries/>
-      <ProductDetails/>
+      <ProductDetails price = "300.000" category = "Gundam Series" title = "Gundam Barbatos" />
     </div>
   );
 }
@@ -19,16 +19,13 @@ function ProductGalleries(){
   );
 }
 
-function ProductDetails(){
-  const category = "Gundam Series";
-  const title = "Gundam Barbatos";
-  const price = 300000;
-
+function ProductDetails(props){
+  const {category, title, price} = props;
   return (
     <div className="App-details">
       <p className="App-category">{category}</p>
       <h1 className="App-title">{title}</h1>
-      <h1 className="App-price">IDR {price}</h1>
+      <h1 className="App-price">IDR {price},-</h1>
       <p className="App-deskripsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Sit, saepe. Voluptatem ullam illum tempora maxime? 
           Magnam quam est fugiat aliquid sit doloremque voluptates commodi, soluta pariatur qui quae. 
