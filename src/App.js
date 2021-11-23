@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import img01 from './assets/img/img-01.jpg'
+import img01 from './assets/img/img-01.jpg';
+import PropTypes from 'prop-types';
 
 function App() {
   return (
@@ -13,10 +14,10 @@ function App() {
 }
 
 function CheckDiscount(props){
-  const {isDiscount} = props;
+  const {isDiscount, discount} = props;
   if(isDiscount == "yes") {
     return (
-      <p>Diskon 50%</p>
+      <p>Diskon {discount}%</p>
     );
   } else if (isDiscount == "coming") {
     return (
@@ -41,14 +42,14 @@ function ProductDetails(props){
   const {category, title, price, isDiscount} = props;
   const spesification = ["Bandai", "Plastik", "Garansi 1 Bulan"];
   const listItems = spesification.map((itemLists) =>
-    <li>{itemLists}</li>
+    <li key={itemLists}>{itemLists}</li>
   );
   return (
     <div className="App-details">
       <p className="App-category">{category}</p>
       <h1 className="App-title">{title}</h1>
       <h1 className="App-price">IDR {price},-</h1>
-      <CheckDiscount isDiscount={isDiscount} />
+      <CheckDiscount isDiscount={isDiscount} discount={50} />
       <p className="App-deskripsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Sit, saepe. Voluptatem ullam illum tempora maxime? 
           Magnam quam est fugiat aliquid sit doloremque voluptates commodi, soluta pariatur qui quae. 
@@ -66,5 +67,8 @@ function AddCart(e){
   return console.log("Membeli Produk " + e);
 }
 
+CheckDiscount.propTypes = {
+  discount: PropTypes.number.isRequired
+};
 
 export default App;

@@ -25,7 +25,7 @@ export default class Review extends Component {
             <div className="Image-review">
                 <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
             </div>
-            <div className="User-review">
+            <div ky={itemReview.id} className="User-review">
                 <h3>{itemReview.name}</h3>
                 <p>{itemReview.review}</p>
             </div>
