@@ -55,5 +55,36 @@
   transition: all 0.5s;
 }
 
+.App-review {
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+.App-review h2{
+  margin-top: 50px;
+}
+.App-review .Image-review{
+  width: 80%;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.App-review img{
+  width: 80px;
+  height: 80px;
+  background: #b1b1b1;
+  border-radius: 11px;
+  float: left;
+  margin-right: 16px;
+}
+.App-review .User-review p, h3{
+  margin: 0;
+}
+.App-review .User-review h3{
+  padding-top: 10px;
+  margin-bottom: 8px;
+}
+
+
 
 

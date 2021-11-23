@@ -7,6 +7,16 @@ function App() {
     <div className="App">
       <ProductGalleries/>
       <ProductDetails isDiscount = "yes" price = "300.000" category = "Gundam Series" title = "Gundam Barbatos" />
+      <div className="App-review">
+        <h2>Review</h2>
+        <div className="Image-review">
+          <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+        </div>
+        <div className="User-review">
+          <h3>Muhamad Ridwan</h3>
+          <p></p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -63,5 +73,26 @@ function ProductDetails(props){
 
 function AddCart(e){
   return console.log("Membeli Produk " + e);
+}
+
+function ReviewItem(){
+  // mempersiapkan data dummy JSON
+  const users = [
+    {
+      "id": 1,
+      "name": "Muhamad Ridwan",
+      "review": "Pengiriman cepat, harga terjangkau dan kualitas barang ori. Keren!"
+    },
+    {
+      "id": 2,
+      "name": "Muhamad Ridwan",
+      "review": "Pengiriman cepat, harga terjangkau dan kualitas barang ori. Keren!"
+    },
+    {
+      "id": 3,
+      "name": "Muhamad Ridwan",
+      "review": "Pengiriman cepat, harga terjangkau dan kualitas barang ori. Keren!"
+    },
+  ]
 }
 export default App;
