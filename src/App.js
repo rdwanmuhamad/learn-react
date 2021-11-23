@@ -38,6 +38,10 @@ function ProductGalleries(){
 
 function ProductDetails(props){
   const {category, title, price, isDiscount} = props;
+  const spesification = ["Bandai", "Plastik", "Garansi 1 Bulan"];
+  const listItems = spesification.map((itemLists) =>
+    <li>{itemLists}</li>
+  );
   return (
     <div className="App-details">
       <p className="App-category">{category}</p>
@@ -49,6 +53,9 @@ function ProductDetails(props){
           Magnam quam est fugiat aliquid sit doloremque voluptates commodi, soluta pariatur qui quae. 
           Omnis, quasi!
       </p>
+      <ul>
+        <li>{listItems}</li>
+      </ul>
       <a href="#" onClick={(e) => AddCart(title, e)}>Add Cart</a>
   </div>
   );
